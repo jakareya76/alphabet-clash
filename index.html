@@ -12,8 +12,10 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-[#010313] min-h-screen">
-    <main class="bg-[url(images/background.png)] bg-no-repeat bg-center">
+  <body>
+    <main
+      class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center"
+    >
       <!-- home -->
       <section
         class="flex flex-col items-center justify-center hidden h-screen"
@@ -33,7 +35,7 @@
       </section>
 
       <!-- playground start -->
-      <section>
+      <section class="hidden">
         <div
           class="container flex flex-col items-center justify-center h-screen gap-8 mx-auto"
         >
@@ -42,7 +44,16 @@
             <div
               class="border-[15px] rounded-2xl border-[#010313cc] artboard artboard-horizontal phone-5 backdrop-blur-sm bg-[#ffffffb3]"
             >
-              <div class="flex items-center justify-center w-full h-full">
+              <div class="w-full">
+                <p
+                  class="bg-[#2F2941] text-white p-3 w-[350px] mx-auto text-center rounded-b-xl"
+                >
+                  Don't watch keyboard while playing...
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center w-full h-[80%]"
+              >
                 <h1 class="font-bold text-8xl">Y</h1>
               </div>
             </div>
@@ -89,7 +100,7 @@
           <!-- life and score -->
           <div class="flex items-center justify-between w-full">
             <button
-              class="btn bg-[#894189] border-none text-xl text-white hover:bg-[#894189]"
+              class="btn bg-[#894189] rounded-full border-none text-xl text-white hover:bg-[#894189]"
             >
               Life
               <img src="./images/heart-icon.svg" alt="" />
@@ -97,7 +108,7 @@
               1
             </button>
             <button
-              class="btn bg-[#360490] text-xl border-none text-white hover:bg-[#360490]"
+              class="btn bg-[#360490] text-xl border-none rounded-full text-white hover:bg-[#360490]"
             >
               Score
               <img src="./images/monetization-icon.svg" alt="" />
@@ -110,7 +121,18 @@
       <!-- playground end -->
 
       <!-- score -->
-      <section></section>
+      <section class="flex items-center justify-center min-h-screen">
+        <div
+          class="text-white text-center space-y-6 bg-[#FFFFFF33] p-14 rounded-xl"
+        >
+          <h1 class="text-8xl">
+            <span class="font-extrabold">Score:</span>
+            <span>14</span>
+          </h1>
+          <button class="btn">Play Again</button>
+          <p>Practice will make you a Pro</p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
