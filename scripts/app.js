@@ -16,10 +16,18 @@ document.addEventListener("keyup", function (e) {
   const expectedAlphabet = currentAlphabet.toLowerCase();
 
   if (playerPressed === expectedAlphabet) {
+    const currentScore = getTextElementValueById("current-score");
+    const newScore = currentScore + 1;
+
+    setTextElementValueById("current-score", newScore);
+
     removeBackgroundColorById(expectedAlphabet);
     continueGame();
   } else {
-    console.log("dhurr sala");
+    const currentLife = getTextElementValueById("current-life");
+    const newLife = currentLife - 1;
+
+    setTextElementValueById("current-life", newLife);
   }
 });
 
