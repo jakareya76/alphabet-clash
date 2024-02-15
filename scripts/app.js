@@ -8,11 +8,24 @@ function showElementById(elementId) {
   element.classList.remove("hidden");
 }
 
+document.addEventListener("keyup", function (e) {
+  const playerPressed = e.key;
+
+  const currentAlphabetElement = document.getElementById("current-alphabet");
+  const currentAlphabet = currentAlphabetElement.innerText;
+  const expectedAlphabet = currentAlphabet.toLowerCase();
+
+  if (playerPressed === expectedAlphabet) {
+    console.log("yohohohoho");
+    continueGame();
+  }
+});
+
 function continueGame() {
-  const currentAlphabet = document.getElementById("current-alphabet");
+  const currentAlphabetElement = document.getElementById("current-alphabet");
   const alphabet = getARandomAlphabet();
 
-  currentAlphabet.innerText = alphabet;
+  currentAlphabetElement.innerText = alphabet;
 
   setBackgroundColorById(alphabet);
 }
