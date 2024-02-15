@@ -16,8 +16,10 @@ document.addEventListener("keyup", function (e) {
   const expectedAlphabet = currentAlphabet.toLowerCase();
 
   if (playerPressed === expectedAlphabet) {
-    console.log("yohohohoho");
+    removeBackgroundColorById(expectedAlphabet);
     continueGame();
+  } else {
+    console.log("dhurr sala");
   }
 });
 
