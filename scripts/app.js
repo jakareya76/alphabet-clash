@@ -59,8 +59,7 @@ function gameOver() {
   hideElementById("playground");
   showElementById("score-board");
 
-  const finalScore = document.getElementById("find-score");
-  const currentScore = getTextElementValueById("current-score");
+  const finalScore = getTextElementValueById("current-score");
 
-  finalScore.innerHTML = currentScore;
+  setTextElementValueById("find-score", finalScore);
 }
