@@ -27,6 +27,10 @@ document.addEventListener("keyup", function (e) {
     const currentLife = getTextElementValueById("current-life");
     const newLife = currentLife - 1;
 
+    if (newLife <= 0) {
+      gameOver();
+    }
+
     setTextElementValueById("current-life", newLife);
   }
 });
@@ -42,7 +46,21 @@ function continueGame() {
 
 function play() {
   hideElementById("home");
+  hideElementById("score-board");
   showElementById("playground");
 
+  setTextElementValueById("current-life", 5);
+  setTextElementValueById("current-score", 0);
+
   continueGame();
+}
+
+function gameOver() {
+  hideElementById("playground");
+  showElementById("score-board");
+
+  const finalScore = document.getElementById("find-score");
+  const currentScore = getTextElementValueById("current-score");
+
+  finalScore.innerHTML = currentScore;
 }
