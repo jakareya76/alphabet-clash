@@ -62,4 +62,7 @@ function gameOver() {
   const finalScore = getTextElementValueById("current-score");
 
   setTextElementValueById("find-score", finalScore);
+
+  const currentAlphabet = getElementTextById("current-alphabet");
+  removeBackgroundColorById(currentAlphabet);
 }

@@ -112,13 +112,21 @@
 
               <span id="current-life">5</span>
             </button>
-            <button
-              class="btn bg-[#360490] text-xl border-none rounded-full text-white hover:bg-[#360490]"
-            >
-              Score
-              <img src="./images/monetization-icon.svg" alt="" />
-              <span id="current-score"></span>
-            </button>
+            <div class="space-x-5">
+              <button
+                class="btn bg-[#ee3f3f] text-xl border-none rounded-full text-white hover:bg-[#ee3f3f]"
+                onclick="gameOver()"
+              >
+                Quite Game
+              </button>
+              <button
+                class="btn bg-[#360490] text-xl border-none rounded-full text-white hover:bg-[#360490]"
+              >
+                Score
+                <img src="./images/monetization-icon.svg" alt="" />
+                <span id="current-score"></span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
